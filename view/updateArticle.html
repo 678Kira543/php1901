@@ -1,0 +1,21 @@
+<div class="container my-5">
+    <h2 class="text-center">Редактировать статью</h2>
+    <br>
+    <div class="col-5 mx-auto">
+        <form action="/php/handlerUpdateArticle.php" method="post">
+            <input type="hidden" name="id" value="<?= $row['id'] ?>">
+            <div class="mb-3">
+                <input type="text" class="form-control" name="title" placeholder="Заголовок" value="<?= str_replace('"', "'", $row['title'],) ?>">
+            </div>
+            <div class="mb-3">
+                <textarea name="content" class="form-control" placeholder="Контент"><?= $row['content'] ?></textarea>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="author" placeholder="Автор" value="<?= $row['author'] ?>">
+            </div>
+            <div class="mb-3">
+                <input type="submit" class="btn btn-primary form-control" value="Сохранить"
+            </div>
+        </form>
+    </div>
+</div>

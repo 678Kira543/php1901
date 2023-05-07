@@ -1,0 +1,51 @@
+<h1 class="text-center">Добавить статью</h1>
+<br>
+<div class="col-md-8 mx-auto">
+    <form onsubmit="sendForm(this); return false;" action="/addArticle" method="post">
+        <div class="mb-3">
+            <input type="text" class="form-control" name="title" placeholder="Заголовок">
+        </div>
+        <div class="mb-3">
+            <textarea id="sample" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="author" placeholder="Автор">
+        </div>
+        <div class="mb-3">
+            <input type="submit" class="btn btn-primary form-control">
+        </div>
+    </form>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/suneditor@latest/dist/css/suneditor.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/suneditor@latest/assets/css/suneditor.css" rel="stylesheet"> -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/suneditor@latest/assets/css/suneditor-contents.css" rel="stylesheet"> -->
+<script src="https://cdn.jsdelivr.net/npm/suneditor@latest/dist/suneditor.min.js"></script>
+<!-- languages (Basic Language: English/en) -->
+<script src="https://cdn.jsdelivr.net/npm/suneditor@latest/src/lang/ru.js"></script>
+<script>
+    const editor = SUNEDITOR.create((document.getElementById('sample') || 'sample'),{
+        lang: SUNEDITOR_LANG['ru'],
+        height: "300px",
+        buttonList: [
+            ['undo', 'redo'],
+            ['font', 'fontSize', 'formatBlock'],
+            ['blockquote', 'bold', 'underline', 'italic', 'strike', 'fontColor', 'hiliteColor', 'textStyle'],
+            '/',
+            ['align', 'list', 'table', 'link', 'image', 'video', 'audio'],
+            ['save'],
+            /** ['dir', 'dir_ltr', 'dir_rtl'] */ // "dir": Toggle text direction, "dir_ltr": Right to Left, "dir_rtl": Left to Right
+        ]
+    });
+    function sendForm(form){
+        let formData = new  FormData(form);
+        formData.append('content', editor.getContents());
+        fetch('/addArticle', {
+            method: "POST",
+            body: formData
+        }).then(response=>response.json())
+            .then(result=>{
+                console.log(result);
+            })
+
+    }
+</script>

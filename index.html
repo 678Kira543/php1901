@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>WOW vlog</title>
+		<script src="https://kit.fontawesome.com/f68bde411c.js" crossorigin="anonymous"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<style>
+			.bg-image{
+				background: url("img/bg-image.jpg");
+				background-size: cover;
+				color: aliceblue;
+			}
+		</style>
+  </head>
+  <body>
+  <!-- Тут начинается меню -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	  <div class="container-fluid">
+		<a class="navbar-brand" href="#">WOW vlog</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+			</li>
+			  <li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="addArticles.php">Добавить статью</a>
+			  </li>
+			  <li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="articles.php">Статьи</a>
+			  </li>
+			  <li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="profile.php">Профиль</a>
+			  </li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Ссылка</a>
+			</li>
+		  </ul>
+			<a href="login.php" class="btn btn-primary me-1">Вход</a>
+			<a href="reg.html" class="btn btn-primary">Регистрация</a>
+		</div>
+	  </div>
+	</nav>
+  <!-- Тут заканчивается меню -->
+  
+  <!-- Тут начинается карусель -->
+  <div id="carouselExample" class="carousel slide">
+	  <div class="carousel-inner">
+		<div class="carousel-item active">
+		  <img src="img/1.jpg" class="d-block w-100" alt="...">
+		</div>
+		<div class="carousel-item">
+		  <img src="img/2.jpg" class="d-block w-100" alt="...">
+		</div>
+		<div class="carousel-item">
+		  <img src="img/3.jpg" class="d-block w-100" alt="...">
+		</div>
+	  </div>
+	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	  </button>
+	  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	  </button>
+	</div>
+    <!-- Тут заканчиваетсяется карусель -->
+    <div class="container py-3">
+		<h1 class="text-center mb-3">Технологии которые мы изучаем</h1>
+		<div class="row text-center">
+			<div class="col-md-4">
+				<i class="fa-brands fa-html5 fa-9x" style="color: #f06529;"></i>
+					<h3>HTML</h3>
+			</div>
+			<div class="col-md-4">
+				<i class="fa-brands fa-css3-alt fa-9x" style="color: #2965f1;"></i>
+				<h3>CSS</h3>
+			</div>
+			<div class="col-md-4">
+				<i class="fa-brands fa-bootstrap fa-9x" style="color: #563d7c;"></i>
+				<h3>Bootstrap</h3>
+			</div>
+		</div>
+	</div>
+
+  	<div class="container-fluid bg-image py-5 my-3">
+		<div class="col-sm-7 mx-auto p-4 border border-white" style="background: rgba(0, 0, 0, .5); box-shadow: 0 0 10px 1px black">
+			<h3>Что это за сайт и как им пользоваться</h3>
+			<p>Данный сайт о IT ехнологиях. </p>
+			<p>На сайте Вы можете узнать полезную информацию и потыкать на разные кнопочки:)</p>
+		</div>
+	</div>
+
+  	<div class="container my-3">
+		<div class="row">
+			<div class="col-sm-3">
+				<p>
+					<strong><i class="fa-solid fa-map-location-dot"></i> Адрес: </strong> <br> г.Москва
+				</p>
+				<p>
+					<strong><i class="fa-solid fa-phone"></i> Телефон: </strong> <br> +7 963 786-67-67
+				</p>
+				<p>
+					<strong><i class="fa-solid fa-business-time"></i> Время работы: </strong> <br> ПН-ПТ с 9:30-18:00
+				</p>
+			</div>
+				<div class="col-sm-9">
+					<form action="">
+						<div class="mb-3">
+							<input type="text" class="form-control" placeholder="Номер телефона">
+						</div>
+						<div class="mb-3">
+							<input type="text" class="form-control"placeholder="Имя" >
+						</div>
+						<div class="mb-3">
+							<textarea class="form-control" placeholder="Сообщение"></textarea>
+						</div>
+						<div class="mb-3">
+							<input type="submit" class="form-control btn btn-primary" >
+						</div>
+					</form>
+				</div>
+		</div>
+	</div>
+  	<footer class="container-fluid bg-dark text-light text-center py-5">
+		<div class="container">
+			&copy; 2023 FC-PH-1901-1
+		</div>
+	</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
